@@ -9,7 +9,14 @@
                 <span class="text-blue-600 font-semibold"><%= @car.company.name %></span>
             </p>
             
-            
+            <div class="grid grid-cols-2 gap-4">
+                <p class="text-lg text-gray-700"><strong>🔋 Engine:</strong> <span class="font-semibold"><%= @car.engine_ltr %> L</span></p>
+                <p class="text-lg text-gray-700"><strong>🚀 Horsepower:</strong> <span class="font-semibold"><%= @car.horsepower %> HP</span></p>
+                <p class="text-lg text-gray-700"><strong>⚡ Torque:</strong> <span class="font-semibold"><%= @car.torque_lb %> lb-ft</span></p>
+                <p class="text-lg text-gray-700"><strong>⏱️ 0-60 Time:</strong> <span class="font-semibold"><%= @car.time_60 %> sec</span></p>
+            </div>
+
+          
         </div>
 
         <!-- Back Button -->
