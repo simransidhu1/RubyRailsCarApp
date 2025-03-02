@@ -24,6 +24,14 @@ class PagesController < ApplicationController
   end
   
 
+  def showcar
+    @car = OldCar.find(params[:id])
+  end
+  
+
+  def customers
+    @customers = Customer.all.page(params[:page]).per(50) # 50 customers per page
+  end
 
 
 end
