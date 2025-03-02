@@ -16,7 +16,12 @@
                 <p class="text-lg text-gray-700"><strong>⏱️ 0-60 Time:</strong> <span class="font-semibold"><%= @car.time_60 %> sec</span></p>
             </div>
 
-          
+            <div class="bg-green-100 text-green-700 font-bold text-lg px-4 py-2 rounded-lg inline-block shadow">
+                💰 Price: <%= number_to_currency(@car.price_old) %>
+                <% if @car.created_at > 10.days.ago %>
+                    <span class="text-sm text-blue-600 font-semibold">🚗 New Arrival!</span>
+                <% end %>
+            </div>
         </div>
 
         <!-- Back Button -->
