@@ -33,5 +33,16 @@ class PagesController < ApplicationController
     @customers = Customer.all.page(params[:page]).per(50) # 50 customers per page
   end
 
+  def sales
+    @sales = Sale.page(params[:page]).per(50) # Display 50 sales per page
+  end
+
+  def sale
+    @sale = Sale.find(params[:id])
+  end
+
+  def showcustomer
+    @customer = Customer.find(params[:id])
+  end
 
 end
