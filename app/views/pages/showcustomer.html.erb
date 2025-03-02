@@ -11,6 +11,11 @@
       <p class="text-lg text-gray-700"><strong>📞 Phone:</strong> <span class="font-semibold"><%= @customer.phone %></span></p>
       <p><strong>📅 Joined:</strong> <%= @customer.created_at.strftime("%B %d, %Y") %></p>
 
+    <% if @customer.created_at > 30.days.ago %>
+    <span class="text-sm text-blue-600 font-semibold">✨ New Customer</span>
+    <% end %>
+
+    
     </div>
 
     <!-- Back Button -->
