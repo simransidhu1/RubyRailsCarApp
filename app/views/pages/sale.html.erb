@@ -1,0 +1,36 @@
+<div class="container mx-auto p-8">
+  <h1 class="text-4xl font-bold mb-8 text-center text-green-700">Sale Details</h1>
+
+  <div class="bg-white shadow-lg rounded-lg p-8 space-y-6">
+    
+    <!-- Sale Information Section -->
+    <div class="bg-gray-100 p-6 rounded-lg">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4">Sale Information</h2>
+      <p class="text-lg"><strong>Sale ID:</strong> <%= @sale.id %></p>
+      <p class="text-lg"><strong>Sale Price:</strong> <%= number_to_currency(@sale.sale_price) %></p>
+      <p class="text-lg"><strong>Date of Sale:</strong> <%= @sale.created_at.strftime("%d %b %Y, %I:%M %p") %></p>
+    </div>
+
+    <%= link_to showcustomer_path(@sale.customer), class: "block" do %>
+      <div class="bg-blue-100 p-6 rounded-lg hover:bg-blue-200 transition duration-300">
+        <h2 class="text-2xl font-semibold text-blue-800 mb-4">Customer Information</h2>
+    
+        <p class="text-lg"><strong>Name:</strong> <%= @sale.customer.name %></p>
+        <p class="text-lg"><strong>Email:</strong> <%= @sale.customer.email %></p>
+        <p class="text-lg"><strong>Phone:</strong> <%= @sale.customer.phone %></p>
+        <p class="text-lg"><strong>Address:</strong> <%= @sale.customer.address %></p>
+        <p class="text-lg"><strong>Age:</strong> <%= @sale.customer.age %></p>
+        <p class="text-lg"><strong>Salary:</strong> <%= @sale.customer.salary %></p>
+        <p class="text-lg"><strong>Gender:</strong> <%= @sale.customer.gender %></p>
+      </div>
+    <% end %>
+    
+
+
+  </div>
+
+  <!-- Back Button -->
+  <div class="mt-8 text-center">
+    <%= link_to 'Back to Sales', sales_path, class: "px-6 py-3 bg-green-500 text-white font-semibold rounded-lg shadow-md hover:bg-green-600 transition duration-300" %>
+  </div>
+</div>
