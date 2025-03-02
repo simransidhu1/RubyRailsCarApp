@@ -1,0 +1,35 @@
+<div class="container mx-auto p-6">
+  <h1 class="text-3xl font-bold mb-6 text-center text-blue-600">Customers List</h1>
+
+  <table class="w-full border-collapse border border-gray-300">
+    <thead>
+      <tr class="bg-blue-500 text-white">
+        <th class="border border-gray-300 px-4 py-2">ID</th>
+        <th class="border border-gray-300 px-4 py-2">Name</th>
+        <th class="border border-gray-300 px-4 py-2">Email</th>
+        <th class="border border-gray-300 px-4 py-2">Phone</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr class="bg-gray-100 hover:bg-gray-200 cursor-pointer" onclick="window.location='<%= showcustomer_path(customer) %>'">
+          <td class="border border-gray-300 px-4 py-2"><%= customer.id %></td>
+          <td class="border border-gray-300 px-4 py-2"><%= customer.name %></td>
+          <td class="border border-gray-300 px-4 py-2"><%= customer.email %></td>
+          <td class="border border-gray-300 px-4 py-2"><%= customer.phone %></td>
+        </tr>
+
+      <% end %>
+    </tbody>
+  </table>
+
+  <div class="mt-6 flex justify-center">
+    <% if @customers.prev_page %>
+      <%= link_to 'Previous', customers_path(page: @customers.prev_page), class: "px-4 py-2 bg-gray-300 rounded mr-2 hover:bg-gray-400" %>
+    <% end %>
+
+    <% if @customers.next_page %>
+      <%= link_to 'Next', customers_path(page: @customers.next_page), class: "px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600" %>
+    <% end %>
+  </div>
+</div>
