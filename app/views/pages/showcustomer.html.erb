@@ -2,8 +2,15 @@
   <div class="w-full max-w-md bg-white bg-opacity-90 shadow-lg rounded-lg p-8 backdrop-blur-md">
     <h1 class="text-4xl font-extrabold text-center text-blue-800 mb-6">🧑‍💼 Customer Details</h1>
 
-    
-    
+    <div class="space-y-4">
+      <p class="text-lg text-gray-700"><strong>🆔 ID:</strong> <span class="font-semibold"><%= @customer.id %></span></p>
+      <p class="text-lg text-gray-700"><strong>📛 Name:</strong> 
+        <span class="text-blue-600 font-semibold"><%= @customer.name %></span>
+      </p>
+      <p class="text-lg text-gray-700"><strong>📧 Email:</strong> <span class="text-green-600 font-semibold"><%= @customer.email %></span></p>
+      <p class="text-lg text-gray-700"><strong>📞 Phone:</strong> <span class="font-semibold"><%= @customer.phone %></span></p>
+      <p><strong>📅 Joined:</strong> <%= @customer.created_at.strftime("%B %d, %Y") %></p>
+
     </div>
 
     <!-- Back Button -->
