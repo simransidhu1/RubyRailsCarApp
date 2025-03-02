@@ -1,0 +1,21 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: one
+  model: MyString
+  year: 1
+  engine_ltr: 9.99
+  horsepower: 9.99
+  torque_lb: 9.99
+  time_60: 9.99
+  price_old: 9.99
+
+two:
+  company: two
+  model: MyString
+  year: 1
+  engine_ltr: 9.99
+  horsepower: 9.99
+  torque_lb: 9.99
+  time_60: 9.99
+  price_old: 9.99

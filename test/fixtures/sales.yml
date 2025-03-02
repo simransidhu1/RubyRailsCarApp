@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  old_car: one
+  customer: one
+  sale_price: 9.99
+  sale_date: 2025-02-27
+
+two:
+  old_car: two
+  customer: two
+  sale_price: 9.99
+  sale_date: 2025-02-27
