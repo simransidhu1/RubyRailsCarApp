@@ -26,7 +26,32 @@
       </button>
     </form>
 
-   
+    <!-- Old Cars Table -->
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white shadow-md rounded-lg">
+        <thead>
+          <tr class="bg-blue-500 text-white">
+            <th class="py-3 px-6 text-left">Car Name</th>
+            <th class="py-3 px-6 text-left">Model</th>
+            <th class="py-3 px-6 text-left">Year</th>
+            <th class="py-3 px-6 text-left">Price</th>
+            <th class="py-3 px-6 text-left">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @old_cars.each do |car| %>
+         <tr class="border-b hover:bg-gray-100 cursor-pointer" onclick="window.location='<%= showcar_path(car) %>'">
+          <td class="py-3 px-6"><%= car.company.name %></td>
+          <td class="py-3 px-6"><%= car.model %></td>
+          <td class="py-3 px-6"><%= car.year %></td>
+          <td class="py-3 px-6 text-green-600 font-bold">$<%= car.price_old %></td>
+          <td class="py-3 px-6"></td>
+        </tr>
+
+          <% end %>
+        </tbody>
+      </table>
+    </div>
 
     <!-- Pagination Controls -->
     <div class="mt-6 flex justify-center">
