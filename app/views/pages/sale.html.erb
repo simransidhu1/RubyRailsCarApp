@@ -26,6 +26,20 @@
     <% end %>
     
 
+    <%= link_to showcar_path(@sale.old_car), class: "block" do %>
+      <div class="bg-yellow-100 p-6 rounded-lg hover:bg-yellow-200 transition duration-300">
+        <h2 class="text-2xl font-semibold text-yellow-800 mb-4">Car Information</h2>
+    
+        <p class="text-lg"><strong>Model:</strong> <%= @sale.old_car.model %></p>
+        <p class="text-lg"><strong>Company:</strong> <%= @sale.old_car.company.name %></p>
+        <p class="text-lg"><strong>Year:</strong> <%= @sale.old_car.year %></p>
+        <p class="text-lg"><strong>Engine Capacity:</strong> <%= @sale.old_car.engine_ltr %> L</p>
+        <p class="text-lg"><strong>Horsepower:</strong> <%= @sale.old_car.horsepower %> HP</p>
+        <p class="text-lg"><strong>Torque:</strong> <%= @sale.old_car.torque_lb %> lb-ft</p>
+        <p class="text-lg"><strong>0-60 mph Time:</strong> <%= @sale.old_car.time_60 %> seconds</p>
+        <p class="text-lg"><strong>Original Price:</strong> <%= number_to_currency(@sale.old_car.price_old) %></p>
+      </div>
+    <% end %>
 
   </div>
 
